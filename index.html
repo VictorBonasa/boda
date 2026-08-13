@@ -820,22 +820,41 @@ body.lock-scroll{
 .venue__img {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 3/4;
-  border-radius: 50% 50% 4px 4px / 30% 30% 4px 4px;
-  box-shadow: 0 12px 40px rgba(61, 40, 23, 0.18);
+  aspect-ratio: 3 / 4;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 88%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 88%,
+    transparent 100%
+  );
 }
+
 .venue__img img {
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   animation: breathe 18s ease-in-out infinite;
 }
+
 .venue__img::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(61, 40, 23, 0.25), transparent 50%);
+  background: linear-gradient(
+    to bottom,
+    transparent 65%,
+    rgba(248, 245, 238, 0.85) 100%
+  );
+  pointer-events: none;
 }
-
 .venue__text > * {
   opacity: 0;
   transform: translateY(30px);
@@ -1703,7 +1722,7 @@ a.contact__card::after {
   <div class="hero__frame"></div>
 
   <div class="hero__facade">
-    <img src="images/sancayetano.webp" alt="Iglesia San Cayetano" width="700" height="900">
+    <img src="images/sancayetano.webp" alt="Iglesia San Cayetano" width="700">
   </div>
 
   <div class="hero__inner">
@@ -1749,11 +1768,11 @@ a.contact__card::after {
       <p class="venue__name">Iglesia de San Cayetano</p>
       <p class="venue__detail">
         <span>Dirección</span>
-        <span>Calle de Don Jaime I, 18, 50003 Zaragoza</span>
+        <span>Pza. del Justicia, s/n, 50003 Zaragoza</span>
       </p>
       <p class="venue__detail">
         <span>Hora</span>
-        <span>12:30 h · Recepción desde las 12:00 h</span>
+        <span>12:00 h</span>
       </p>
       <p class="venue__detail">
         <span>Fecha</span>
@@ -1783,11 +1802,11 @@ a.contact__card::after {
     <!-- CONTENEDOR DEL TEXTO -->
     <div class="venue__text">
       <span class="eyebrow">La celebración</span>
-      <h2 class="venue__title">Restaurante <em>El Sella</em></h2>
-      <p class="venue__name">El Sella · Zaragoza</p>
+      <h2 class="venue__title">Restaurante <em>El Hábitat Sella</em></h2>
+      <p class="venue__name">El Hábitat Sella · Villanueva de Gállego (Zaragoza)</p>
       <p class="venue__detail">
         <span>Dirección</span>
-        <span>Carretera de Castellón, km 4,5 · 50013 Zaragoza</span>
+        <span>Calle Pilar Lorengar · 50830 Villanueva de Gállego, Zaragoza</span>
       </p>
       <p class="venue__detail">
         <span>Hora</span>
@@ -1795,7 +1814,7 @@ a.contact__card::after {
       </p>
       <p class="venue__detail">
         <span>Comida</span>
-        <span>16:00 h · Almuerzo servido en jardín y salón</span>
+        <span>16:00 h · Almuerzo servido en salón</span>
       </p>
       <p class="venue__detail">
         <span>Parking</span>
@@ -1803,7 +1822,7 @@ a.contact__card::after {
       </p>
       <p class="venue__detail">
         <span>Transporte</span>
-        <span>Autobús lanzadera desde el centro de Zaragoza (salida 13:45 h)</span>
+        <span>Autobús lanzadera desde el centro de Zaragoza (salida 14:00 h)</span>
       </p>
       <a class="venue__cta" href="https://maps.google.com/?q=Restaurante+El+Sella+Zaragoza" target="_blank" rel="noopener">
         Cómo llegar
@@ -1820,7 +1839,7 @@ a.contact__card::after {
   <div class="container">
     <div class="itinerary__head">
       <span class="eyebrow">19 de junio de 2027</span>
-      <h2>El <em>día</em> detallado</h2>
+      <h2>El <em>gran</em> día</h2>
     </div>
 
     <div class="timeline">
@@ -1828,49 +1847,35 @@ a.contact__card::after {
         <div class="tl__time">12:00</div>
         <div class="tl__body">
           <h3 class="tl__title">Recepción en la iglesia</h3>
-          <p class="tl__desc">Llegada de los invitados a la Iglesia de Santa Isabel de Portugal. Os recibiremos con un café y un apretón de manos antes de la ceremonia.</p>
+          <p class="tl__desc">Ceremonia religiosa.</p>
         </div>
       </div>
       <div class="tl__item">
-        <div class="tl__time">12:30</div>
+        <div class="tl__time">14:00</div>
         <div class="tl__body">
-          <h3 class="tl__title">Ceremonia</h3>
-          <p class="tl__desc">Ceremonia religiosa. Aproximadamente 60 minutos. Os pedimos silenciar los móviles y disfrutar del momento con nosotros.</p>
-        </div>
-      </div>
-      <div class="tl__item">
-        <div class="tl__time">13:30</div>
-        <div class="tl__body">
-          <h3 class="tl__title">Salida de los novios y fotos</h3>
-          <p class="tl__desc">Arroz, pétalos y muchas fotos a la puerta de la iglesia. Luego autobús lanzadera hacia El Sella para quienes lo necesiten.</p>
+          <h3 class="tl__title">Salida del autobús al Hábitat Sella</h3>
+          <p class="tl__desc">Para quienes lo soliciten</p>
         </div>
       </div>
       <div class="tl__item">
         <div class="tl__time">14:30</div>
         <div class="tl__body">
           <h3 class="tl__title">Cóctel de bienvenida</h3>
-          <p class="tl__desc">Aperitivos y bebidas en los jardines de El Sella. Tiempo para reencontrarnos, charlar y brindar antes de la comida.</p>
+          <p class="tl__desc">Aperitivos y bebidas en los jardines de El Hábitat Sella. Tiempo para reencontrarnos, charlar y brindar antes de la comida.</p>
         </div>
       </div>
       <div class="tl__item">
         <div class="tl__time">16:00</div>
         <div class="tl__body">
           <h3 class="tl__title">Almuerzo</h3>
-          <p class="tl__desc">Comida servida en el salón principal. Menú degustación con productos de temporada. Si tenéis alergias o restricciones, indicadlo en el formulario.</p>
+          <p class="tl__desc">Comida servida en el salón principal. Si tenéis alergias o restricciones, indicadlo en el formulario.</p>
         </div>
       </div>
       <div class="tl__item">
-        <div class="tl__time">18:30</div>
-        <div class="tl__body">
-          <h3 class="tl__title">Tarta y primer baile</h3>
-          <p class="tl__desc">Corte de la tarta nupcial, primer baile de los novios y apertura de la pista. Empieza la fiesta de verdad.</p>
-        </div>
-      </div>
-      <div class="tl__item">
-        <div class="tl__time">22:00</div>
+        <div class="tl__time">24:00</div>
         <div class="tl__body">
           <h3 class="tl__title">Fin de la celebración</h3>
-          <p class="tl__desc">Hora prevista de finalización. Habrá servicio de taxis disponibles para regresar al centro de Zaragoza. Gracias por acompañarnos.</p>
+          <p class="tl__desc">Hora prevista de finalización. Autobús de regreso a Zaragoza. Gracias por acompañarnos.</p>
         </div>
       </div>
     </div>
@@ -1917,7 +1922,7 @@ a.contact__card::after {
       <span class="eyebrow">Confirmación de asistencia</span>
       <h2 class="rsvp__title">¿Nos <em>acompañáis</em>?</h2>
       <p class="rsvp__text">Para nosotros es imprescindible saber si podréis estar presentes. Cada invitado cuenta, y nos gustaría prepararlo todo con cariño.</p>
-      <p class="rsvp__text">Por favor, rellenad el formulario antes de la fecha límite.</p>
+      <p class="rsvp__text">Por favor, rellenad el formulario lo antes posible.</p>
       <span class="rsvp__deadline">Fecha límite · 19 de marzo de 2027</span>
       <a class="rsvp__btn" href="https://forms.gle/PLACEHOLDER" target="_blank" rel="noopener">
         Confirmar asistencia
@@ -1958,31 +1963,21 @@ a.contact__card::after {
       <h2>Antes de <em>venir</em></h2>
     </div>
 
-    <div class="practical__grid">
       <div class="pcard">
         <div class="pcard__arch"></div>
-        <h3 class="pcard__title">Código de vestuario</h3>
-        <p class="pcard__desc">Elegante. Os pedimos evitar el color blanco, marfil y tonos similares reservados para la novia. Para mujeres, se recomienda tacón cómodo dado que parte de la celebración será en jardín.</p>
-        <span class="pcard__hint">Hombres: traje oscuro · Mujeres: largo o cóctel</span>
-      </div>
-
-      <div class="pcard">
-        <div class="pcard__arch"></div>
-        <h3 class="pcard__title">Alojamiento</h3>
-        <p class="pcard__desc">Hemos gestionado tarifas especiales en varios hoteles del centro de Zaragoza para los invitados que vengan de fuera. Reservad con antelación mencionando nuestra boda.</p>
+        <h3 class="pcard__title">¡GRACIAS!</h3>
+       ass="pcard">
+          <h3 class="pcard__title">Vuestra compañía es nuestro mejor regalo.</h3>
+        
+  <p class="pcard__desc">
+    Si además queréis tener un detalle con nosotros, podéis acompañarnos en el comienzo de esta nueva etapa.
+  </p>
         <ul class="pcard__list">
-          <li><span>Hotel Palafox ****</span><span>— 10% dto.</span></li>
-          <li><span>Hotel Reina Petronila *****</span><span>— tarifa boda</span></li>
-          <li><span>Hiberia &amp; Tudela ***</span><span>— 15% dto.</span></li>
-          <li><span>Catalonia El Pilar ****</span><span>— tarifa boda</span></li>
+          <li><span>Titular</span><span>Lorena & Víctor</span></li>
+          <li><span>IBAN</span><span>ES00 0000 0000 0000</span></li>
+          <li><span>Concepto</span><span>"Boda L&amp;V"</span></li>
         </ul>
-      </div>
-
-      <div class="pcard">
-        <div class="pcard__arch"></div>
-        <h3 class="pcard__title">Mesa de regalos</h3>
-        <p class="pcard__desc">El mejor regalo es que estéis ahí. Para quienes queráis añadir, hemos habilitado una cuenta para nuestro viaje de novios y proyectos conjuntos.</p>
-        <ul class="pcard__list">
+        <span class="pcard__hint">Gracias de corazón por vuestro cariño.</span>
           <li><span>Titular</span><span>Lorena & Víctor</span></li>
           <li><span>IBAN</span><span>ES00 0000 0000 0000</span></li>
           <li><span>Concepto</span><span>"Boda L&amp;V"</span></li>
@@ -2001,34 +1996,13 @@ a.contact__card::after {
       <h2>Preguntas <em>frecuentes</em></h2>
     </div>
 
-    <div class="faq__list">
-      <div class="faq__item">
-        <div class="faq__q">
-          <span>¿Puedo llevar acompañante?</span>
-          <span class="toggle"></span>
-        </div>
-        <div class="faq__a">
-          <div class="faq__a-inner">Si en vuestra invitación figura "+1", sí. En caso contrario, por favor consultednos con tiempo y haremos lo posible para acomodar a la persona.</div>
-        </div>
-      </div>
-
-      <div class="faq__item">
-        <div class="faq__q">
-          <span>¿Pueden asistir niños?</span>
-          <span class="toggle"></span>
-        </div>
-        <div class="faq__a">
-          <div class="faq__a-inner">Los peques de la familia son bienvenidos. Habrá menú infantil y zona de juegos en el restaurante. Indicadlo en el formulario de confirmación para prepararlo todo.</div>
-        </div>
-      </div>
-
       <div class="faq__item">
         <div class="faq__q">
           <span>¿Hay transporte entre la iglesia y el restaurante?</span>
           <span class="toggle"></span>
         </div>
         <div class="faq__a">
-          <div class="faq__a-inner">Sí. Habrá un autobús lanzadera saliendo desde el centro de Zaragoza a las 13:45 h con destino al restaurante El Sella, y otro de regreso al final de la celebración. Reservad plaza en el formulario.</div>
+          <div class="faq__a-inner">Sí. Habrá un autobús que saldrá desde el centro de Zaragoza a las 14:00 h con destino al restaurante El Hábitat Sella, y otro de regreso al final del día. No olvidéis reservar plaza en el formulario.</div>
         </div>
       </div>
 
@@ -2038,7 +2012,7 @@ a.contact__card::after {
           <span class="toggle"></span>
         </div>
         <div class="faq__a">
-          <div class="faq__a-inner">Indicadlo en el formulario de confirmación. Trabajamos con el restaurante para ofrecer alternativas para celíacos, intolerantes a la lactosa, vegetarianos y veganos.</div>
+          <div class="faq__a-inner">Indicadlo en el formulario de confirmación. Nos coordinamos con el restaurante para preparar alternativas y no tengáis que preocuparos por nada.</div>
         </div>
       </div>
 
@@ -2048,19 +2022,20 @@ a.contact__card::after {
           <span class="toggle"></span>
         </div>
         <div class="faq__a">
-          <div class="faq__a-inner">Junio en Zaragoza es cálido y seco, con temperaturas que pueden superar los 30°C por la tarde. La ceremonia y el cóctel serán en espacios con sombra. Hidrataos bien y traed protección solar.</div>
+          <div class="faq__a-inner">Junio en Zaragoza es cálido y seco, con temperaturas que pueden superar los 30°C por la tarde.</div>
         </div>
       </div>
 
-      <div class="faq__item">
+     <div class="faq__item">
         <div class="faq__q">
-          <span>¿Puedo tomar fotos durante la ceremonia?</span>
+          <span>No vivo en Zaragoza, ¿dónde puedo alojarme?</span>
           <span class="toggle"></span>
         </div>
         <div class="faq__a">
-          <div class="faq__a-inner">Os pedimos desconectar los móviles durante la ceremonia y disfrutar del momento. Disponemos de fotógrafo profesional que compartirá todas las imágenes con vosotros tras la boda.</div>
+          <div class="faq__a-inner">No te preocupes, ponte en contacto con nosotros para gestionarlo.</div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -2070,23 +2045,23 @@ a.contact__card::after {
   <div class="contact__inner">
     <span class="eyebrow">Estamos para ayudaros</span>
     <h2 class="contact__title">Teléfonos de <em>contacto</em></h2>
-    <p class="contact__sub">Si tenéis cualquier duda, no dudéis en poneros en contacto con nosotros o con nuestra wedding planner. Estaremos encantados de ayudaros.</p>
+    <p class="contact__sub">Si tenéis cualquier duda, no dudéis en poneros en contacto con nosotros. Estaremos encantados de ayudaros. Además, si necesitáis consultar algo con Hábitat Sella, os dejamos el número de la coordinadora del evento. </p>
 
     <div class="contact__grid">
       <a class="contact__card" href="tel:+34600000000">
         <div class="contact__role">La novia</div>
         <h3 class="contact__name">Lorena</h3>
-        <p class="contact__phone">+34 600 000 000</p>
+        <p class="contact__phone">+34 630 364 196</p>
       </a>
       <a class="contact__card" href="tel:+34600000001">
         <div class="contact__role">El novio</div>
         <h3 class="contact__name">Víctor</h3>
-        <p class="contact__phone">+34 600 000 001</p>
+        <p class="contact__phone">+34 618 024 782</p>
       </a>
       <a class="contact__card" href="tel:+34600000002">
-        <div class="contact__role">Wedding planner</div>
-        <h3 class="contact__name">María</h3>
-        <p class="contact__phone">+34 600 000 002</p>
+        <div class="contact__role">Coordinadora Hábitat Sella</div>
+        <h3 class="contact__name">María Jesús</h3>
+        <p class="contact__phone">+34 619 010 907 </p>
       </a>
     </div>
   </div>
@@ -2119,7 +2094,7 @@ a.contact__card::after {
       <span class="ornament__line ornament__line--right"></span>
     </div>
     <div class="footer__date">19 · 06 · 2027 · Zaragoza</div>
-    <div class="footer__credit">Hecho con cariño para compartir nuestro día. Gracias por acompañarnos.</div>
+    <div class="footer__credit">Gracias por acompañarnos, estamos deseando compartirlo con vosotros.</div>
   </div>
 </footer>
 
@@ -2273,7 +2248,7 @@ const openButton = document.getElementById("openInvitation");
 
 if (hero && openButton) {
 
-  // Bloquea el scroll nativo y lenis al cargar
+  // Bloquea el scroll al entrar en la invitación
   document.body.classList.add("lock-scroll");
   lenis.stop();
 
@@ -2287,6 +2262,7 @@ if (hero && openButton) {
 
     opened = true;
 
+    // La portada comienza a desaparecer suavemente
     hero.classList.add("hero--opening");
 
     setTimeout(() => {
@@ -2294,12 +2270,18 @@ if (hero && openButton) {
       document.body.classList.remove("lock-scroll");
       lenis.start();
 
-      lenis.scrollTo("#story",{
-        duration:1.4,
-        offset:-60
+      // Hace aparecer suavemente la siguiente sección
+      if (story) {
+        story.classList.add("--visible");
+      }
+
+      // Desplazamiento suave hacia la historia
+      lenis.scrollTo("#story", {
+        duration: 1.4,
+        offset: -60
       });
 
-    },800);
+    }, 800);
 
   });
 
