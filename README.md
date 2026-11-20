@@ -6,7 +6,7 @@ Página web de nuestra boda, desarrollada como un sitio estático y alojada grat
 
 ## 🌐 Sitio web
 
-👉 https://victorbonasa.github.io/boda/
+👉 https://lorenayvictor.github.io/boda/
 
 ## ✨ Características
 

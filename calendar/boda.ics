@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Boda L&V//ES
+BEGIN:VEVENT
+UID:boda-lorena-victor-20270619@lorenayvictor.github.io
+DTSTAMP:20261118T000000Z
+DTSTART:20270619T100000Z
+DTEND:20270619T190000Z
+SUMMARY:Boda de Lorena y Víctor
+LOCATION:Iglesia de San Cayetano\, Pza. del Justicia\, 50003 Zaragoza
+DESCRIPTION:Ceremonia a las 12:00. Celebración en El Hábitat Sella (Villanueva de Gállego).
+END:VEVENT
+END:VCALENDAR
